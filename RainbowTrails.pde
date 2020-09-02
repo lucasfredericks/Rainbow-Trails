@@ -16,13 +16,18 @@
  along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-int timeMax = 25; // this variable controls the duration of the color trails
+//SETTINGS
+int timeMax = 25;   // controls the duration of the color trails
+//                     a higher timeMax creates a slower effect
+
+int threshold = 80; // controls the difference threshold between subsequent frames
+//                     a lower threshold will make it more sensitive
+//
 
 import processing.video.*;
 
 int numPixels;
 int[] previousFrame;
-int threshold = 80;
 int videoWidth = 1920;
 int videoHeight = 1080;
 Trail[] trails;
